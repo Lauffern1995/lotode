@@ -6,8 +6,8 @@ const assertEqual = function(actual, expected) {
 };
 
 const head = function(arr) {
-  let indexOne = arr[0]; // checking to
-  return indexOne;
+  let indexOne = arr[0]; // chck index is first position 
+  return indexOne; 
 };
 
 assertEqual(head([2,6,5]), 2);

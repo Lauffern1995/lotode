@@ -6,8 +6,8 @@ const assertEqual = function(actual, expected) {
 };
 
 const tail = function(arr) {
-  let newArr = arr.slice(1);
-  return newArr;
+  let newArr = arr.slice(1);// starts the new array at position 1
+  return newArr
 };
 
 const words = ["Yo Yo", "Lighthouse", "Labs",];
