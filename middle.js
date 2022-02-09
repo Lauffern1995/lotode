@@ -26,7 +26,7 @@ const middle = function(array) {
   if (array.length <= 2) { // if arrayay is less than or equal to 2 return empty array
     return [];
   } else if (array.length % 2 !== 0) { 
-    odd.push(array[array.length / 2 | 0]); // push arrayay at 
+    odd.push(array[array.length / 2 | 0]); // push arrayy at 
 
   } else if (array.length % 2 === 0) {
     even.push(array[array.length / 2 - 1]);
@@ -37,10 +37,10 @@ const middle = function(array) {
   return odd;
 };
 
-assertArraysEqual(middle([1, 2, 3, 4, 5, 6, 7]), [4]); // => [4]
-console.log(middle([1, 2, 3, 4, 5, 6])); // => [3, 4]
+console.log(middle([1, 2, 3, 4, 5, 6, 7])); // => [4]
 console.log(middle([1, 2, 3, 4, 5])); // => [3]
 console.log(middle([1, 2, 3, 4])); // => [2, 3]
 console.log(middle([1, 2, 3])); // => [2]
 console.log(middle([1, 2])); // => []
 console.log(middle([1])); // => []
+console.log(middle([1, 2, 3, 4, 5, 6])); // => [3, 4]
