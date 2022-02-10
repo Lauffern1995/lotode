@@ -11,25 +11,24 @@ const eqArrays = function(arr1, arr2) {
 };
 
 
-const assertArraysEqual = function (arr1, arr2) {
+const assertArraysEqual = function(arr1, arr2) {
   if (eqArrays(arr1, arr2) === true) {
     console.log(`✅✅✅Assertion passed: ${arr1} === ${arr2}`);
   } else {
-   console.log(`🛑🛑🛑 Assertion failed: ${arr1} !== ${arr2}`);
+    console.log(`🛑🛑🛑 Assertion failed: ${arr1} !== ${arr2}`);
   }
 };
 
 
 
-const findKey = function (obj, callback) {
+const findKey = function(obj, callback) {
   for (const k of Object.keys(obj)) { // check object keys of obj when passed
     if (callback(obj[k])) { // if callback val is present obj val return the object name and stop func
-      return k
-      break;
+      return k;
     }
   }
-  return undefined
-}
+  return undefined;
+};
 
 
 
@@ -41,5 +40,5 @@ console.log(findKey({
   "elBulli":   { stars: 3 },
   "Ora":       { stars: 2 },
   "Akelarre":  { stars: 3 }
-}, x => x.stars === 2)) // => "noma"
+}, x => x.stars === 2)); // => "noma"
 
