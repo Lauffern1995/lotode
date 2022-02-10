@@ -6,7 +6,7 @@ const assertEqual = function(actual, expected) {
 };
 
 const findKeyByValue = function(obj, val) {
-  let output = '';
+
   const keys = Object.keys(obj);
   const values = Object.values(obj);
   if (!values.includes(val)) {
@@ -17,7 +17,6 @@ const findKeyByValue = function(obj, val) {
       return keys[i];
     }
   }
-  return output;
 };
 
 const bestTVShowsByGenre = {
