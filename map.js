@@ -30,6 +30,11 @@ const map = function(array, callb){
   }
   return results;
 }
+const results1 = map(words, word => word[0]);
+console.log(words);
+
+
+
 
  assertArraysEqual(map(test1, word => word[0]), [ 'N', 'O', 'A', 'H' ])
 
