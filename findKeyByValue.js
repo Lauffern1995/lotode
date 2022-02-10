@@ -9,9 +9,12 @@ const findKeyByValue = function(obj, val) {
   let output = '';
   const keys = Object.keys(obj);
   const values = Object.values(obj);
-  for (let i = 0; i < keys.length; i++) {
-    if (val === values[i]) {
-      output += keys[i];
+  if (!values.includes(val)) {
+    return undefined;
+  }
+  for (let i in keys) {
+    if (values[i] === val) {
+      return keys[i];
     }
   }
   return output;
@@ -24,8 +27,7 @@ const bestTVShowsByGenre = {
 };
 
 
-console.log(findKeyByValue(bestTVShowsByGenre, "The Expanse"));
-console.log(findKeyByValue(bestTVShowsByGenre, "Brooklyn Nine-Nine"));
-console.log(findKeyByValue(bestTVShowsByGenre, "The Wire"));
-console.log(findKeyByValue(bestTVShowsByGenre, "Test"));
+assertEqual(findKeyByValue(bestTVShowsByGenre, "The Expanse"), 'sci_fi');
+assertEqual(findKeyByValue(bestTVShowsByGenre, "Brooklyn Nine-Nine"), 'comedy');
+assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), 'drama');
 assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
