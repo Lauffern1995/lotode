@@ -34,7 +34,6 @@ const eqObjects = function(obj1, obj2) {
       } 
       const val1 = obj1[key1[i]]
       const val2 = obj2[key1[i]]
-      console.log(val1, val2)
       if (Array.isArray(val1) && Array.isArray(val2)) {
         if (!eqArrays(val1, val2)){
           return false
@@ -46,7 +45,6 @@ const eqObjects = function(obj1, obj2) {
   }
     return true
 };
-console.log([1, 2] === [1, 2])
 
 
 const ab = { a: "1", b: "2" };

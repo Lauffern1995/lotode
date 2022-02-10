@@ -49,5 +49,9 @@ const bestTVShowsByGenre2 = {
   drama:  "The Wire"
 };
 
+const ab = { a: "1", b: "2" };
+const ba = { b: "2", a: "1" };
 
 assertObjectsEqual(bestTVShowsByGenre1,bestTVShowsByGenre2)
+
+assertObjectsEqual(ab, ba)

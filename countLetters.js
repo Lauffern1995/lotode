@@ -15,8 +15,8 @@ const countLetters = function(str) {
     output[letter] = 1 // if output doest contain letter, add it with a key of the [letter] ands a value of 1
   }
 }
-  console.log(output)
+  return output
 }
 
-
-assertEqual(countLetters('osh'), { o: 1, s: 1, h: 1 });
+console.log(countLetters('hello'))
+assertEqual(countLetters('hello').l, 2); // function will only work if you ask boolen value ***cannot compare object to object**

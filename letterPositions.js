@@ -2,8 +2,8 @@ const assertArraysEqual = function(arr1, arr2) {
   if (eqArrays(arr1, arr2) === true) {
     console.log(`✅✅✅Assertion passed: ${arr1} === ${arr2}`);
   } else {
-  } console.log(`🛑🛑🛑 Assertion failed: ${arr1} !== ${arr2}`);
-
+   console.log(`🛑🛑🛑 Assertion failed: ${arr1} !== ${arr2}`);
+  }
 };
 
 const eqArrays = function(arr1, arr2) {
@@ -35,6 +35,6 @@ const letterPositions = function(str) {
   return output;
 };
 
-
-assertArraysEqual(letterPositions("hello").e, [1]);
+console.log(letterPositions("hello"))
+assertArraysEqual(letterPositions("hello").h, [1]);
 
