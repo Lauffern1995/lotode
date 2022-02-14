@@ -1,9 +1,3 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected)
-    console.log(`✅✅✅Assertion passed: ${actual} === ${expected}`);
-  else if (actual !== expected)
-    console.log(`🛑🛑🛑 Assertion failed: ${actual} !== ${expected}`);
-};
 
 const eqArrays = function(arr1, arr2) {
   // program to extract value as an array from an array of objects
@@ -20,9 +14,4 @@ const eqArrays = function(arr1, arr2) {
  }
 };
 
-
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => true
-assertEqual(eqArrays([1, 2, 3], [3, 2, 1]), true); // => false
-assertEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]), true); // => true
-assertEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]), true); // => false
+module.exports = eqArrays
