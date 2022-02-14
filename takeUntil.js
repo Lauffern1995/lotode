@@ -22,10 +22,10 @@
  const takeUntil = function(array, callback) {
    const output = []
    for (const i of array) {
-     if (callback(i)) {
+     if (callback(i)) { // if the arr contains the params of the callback in this case if x < 0 or if x = ',' return the output at the point of contact with that condition. 
        return output
      } else {
-       output.push(i)
+       output.push(i) // if not, push the array to the output. 
      }
    }
  }

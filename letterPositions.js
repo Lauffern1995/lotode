@@ -25,16 +25,16 @@ const letterPositions = function(str) {
   const output = {};
   const newStr = str.replace(/\s/g, "");
   for (let i = 0; i < newStr.length; i++) {  //use c style loop to better manage push later
-    let letter = newStr[i]; // setting letter  to newStr[i] to
-    if (output[letter]) {
+    let letter = newStr[i]; // setting letter  to newStr[i] to the actual letter. ex. 'h' in hello
+    if (output[letter]) { // if the letter is present in output then push the INDEX of the letter as a value. ex h : 1
       output[letter].push(i);
     } else {
-      output[letter] = [i];
+      output[letter] = [i]; // if the letter isnt present in the object let the letter be the key and let its value be its index. 
     }
   }
   return output;
 };
 
 console.log(letterPositions("hello"))
-assertArraysEqual(letterPositions("hello").h, [1]);
+// assertArraysEqual(letterPositions("hello").h, [1]);
 
